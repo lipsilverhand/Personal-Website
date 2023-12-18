@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Montserrat:wght@100;200&display=swap');
+
+
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Montserrat';
+}
+
+a {
+    cursor: pointer;
+}
+
+.scroll_top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    border: none;
+    color: white;
+    background-color: rgb(0, 0, 0, 0);
+}
+
+.scroll_top i {
+    font-size: 30px;
+}
+
+.scroll_top i:hover {
+    font-size: 30px;
+    color: bisque;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000; /* make navbar to the front of eveything */
+}
+
+.navbar {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 0 30px 0;
+}
+
+.navbar ul {
+    font-size: 20px;
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 50px;
+    color: white;
+    position: relative;
+    left: 50px;
+    transition: transform 0.4s;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: bisque;
+}
+
+.navbar ul li:hover {
+    transform: scale(1.2);
+}
+
+.logo {
+    font-size: 25px;
+    transition: transform 0.4s;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+    color: bisque;
+}
+
+.main {
+    display: flex;
+    text-align: center;
+    margin: 50px auto 80px;
+    max-width: 1200px;
+    height: 550px;
+    background-color: white;
+    animation: fade-up 0.5s 0.4s backwards;
+}
+
+.intro {
+    position: relative;
+    top: 80px;
+    max-width: 700px;
+    padding-left: 40px;
+    margin-right: 50px;
+}
+
+.intro h1 {
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-align: start;
+}
+
+.intro h3 {
+    margin-bottom: 50px;
+    text-align: start;
+    font-size: 25px;
+}
+
+.intro p {
+    text-align: start;
+    font-size: 20px;
+    margin-bottom: 60px;
+}
+
+.download button {
+    width: 160px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    border: solid 2px black;
+    position: relative;
+}
+
+.download button:hover {
+    background-color: bisque;
+}
+
+.download a {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.resume {
+    margin-right: 15px;
+}
+
+.profile_image {
+    position: relative;
+    width: 340px;
+    height: 460px;
+    top: 50px;
+    box-shadow: 8px 8px;
+}
+
+
+.profile_border {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: black;
+    left: 1240px;
+    top: 480px;
+    animation: fade-up 0.5s 0.4s backwards;
+
+}
+
+.profile_border2 {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background-color: black;
+    left: 1270px;
+    top: 430px;
+    opacity: 80%;
+}
+
+.profile_border3 {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: black;
+    left: 1310px;
+    top: 400px;
+    opacity: 60%;
+}
+
+.profile_border4 {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: black;
+    left: 1325px;
+    top: 360px;
+    opacity: 40%;
+}
+
+hr {
+    max-width: 1000px;
+    margin: 20px auto 50px;
+}
+
+.projects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project_title {
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0 50px 0;
+}
+
+.project_lists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: rgb(0, 0, 0);
+    margin: 50px auto;
+}
+
+.project_lists h3 {
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    margin-bottom: 20px;
+    padding-right: 165px;
+}
+
+.project_lists div {
+    background-color: rgb(255, 255, 255, 88%);
+    width: 350px;
+    height: 500px;
+    transition: background-color 0.9s ease-out;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.project_lists img {
+    width: 280px;
+    height: 200px; 
+    margin-bottom: 20px;
+}
+
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.project_lists div:hover .hidden {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.project_lists p {
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+.project_lists h2 {
+    margin-bottom: 15px;
+}
+
+.project_lists a {
+    color: black;
+    position: relative;
+    top: 25px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project p {
+    margin-bottom: 10px 0;
+}
+
+.project a {
+    font-size: 25px;
+}
+
+.project a:hover {
+    font-size: 25px;
+    color: rgb(79, 31, 200);
+}
+
+.skill_main {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.skill_title {
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    color: white;
+    padding: 15px 0 50px 0;
+}
+
+.skill_para {
+    color: white;
+    text-align: center;
+    font-size: 17px;
+}
+
+.skill_board {
+    background-color: rgb(0, 0, 0);
+    max-width: 800px;
+    padding: 15px 0;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 40px;
+}
+
+.skill_board i {
+    font-size: 60px;
+    color: white;
+    transition: transform 0.5s, margin-top 0.4s ;
+}
+
+.devicon-html5-plain:hover {
+    color: #e34c26;
+    transform: scale(1.2);
+    margin-top: -10px;
+}
+
+.devicon-css3-plain:hover {
+    color: #264de4;
+    transform: scale(1.2);
+    margin-top: -10px;
+}
+
+.devicon-javascript-plain:hover {
+    color: #f0db4f;
+    transform: scale(1.2);
+    margin-top: -10px;
+}
+
+.devicon-bootstrap-plain:hover {
+    color: #563d7c;
+    transform: scale(1.2);
+    margin-top: -10px;
+}
+
+.devicon-nodejs-plain:hover {
+    color: #3c873a;
+    transform: scale(1.2);
+    margin-top: -10px;
+}
+
+.devicon-express-original:hover {
+    color: rgb(187, 213, 213);
+    transform: scale(1.2);
+    margin-top: -10px;
+}
+
+.devicon-postgresql-plain:hover {
+    color: #0064a5;
+    transform: scale(1.2);
+    margin-top: -10px;
+}
+
+.devicon-csharp-plain:hover {
+    color: #52129a;
+    transform: scale(1.2);
+    margin-top: -10px;
+}
+
+.devicon-dotnetcore-plain:hover {
+    color: #9648f0;
+    transform: scale(1.2);
+    margin-top: -10px;
+}
+
+.devicon-python-plain:hover {
+    color: #FFD43B;
+    transform: scale(1.2);
+    margin-top: -10px;
+}
+
+
+
+.hobbies h1 {
+    color: white;
+    text-align: center;
+    padding: 15px 0 50px 0;
+}
+
+.hobbies p {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 17px;
+}
+
+.hobbies_board {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.image1 {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.image2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.image3 {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.image4 {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.image5 {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.jump {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.im:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.im:nth-child(3) {
+    transition-delay: 250ms;
+}
+
+.im:nth-child(4) {
+    transition-delay: 300ms;
+}
+
+.im:nth-child(5) {
+    transition-delay: 350ms;
+}
+
+
+.hobbies_board img:hover {
+    border: solid 10px white;
+}
+
+.contact_title {
+    color: white;
+    text-align: center;
+}
+
+.contact_board {
+    background-color: rgb(255, 255, 255);
+    max-width: 900px;
+    height: 500px;
+    margin: 50px auto;
+    display: flex;
+}
+
+.contact_a {
+    background-color: #000000;
+    flex: 0.8;
+    padding-top: 25px;
+}
+
+.contact_a h2 {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.contact_a hr {
+    width: 320px;
+    margin: 10px auto 40px;
+}
+
+.contact_b {
+    background-color: rgb(255, 255, 255);
+    flex: 1;
+}
+
+.contact_logo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 25px;
+    margin-left: 15px;
+}
+
+.contact_logo i {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.contact_text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+.contact_text p {
+    margin-bottom: 12px;
+}
+
+.lesser {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.contact_links {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact_links a {
+    margin-right: 45px;
+    color: white;
+}
+
+.contact_b {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_b h2 {
+    font-size: 28px;
+}
+
+form {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 30px auto;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+input:nth-child(1) {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+input:nth-child(2) {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.message {
+    width: 300px;
+    height: 230px;
+    border-radius: 5px;
+    font-size: 15px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: 2px solid black;
+    resize: none;
+    padding-top: 10px;
+    margin-bottom: 30px;
+}
+
+.submit {
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.4s ease-out;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.submit:hover {
+    background-color: rgb(0, 0, 0);
+    color: bisque;
+}
+
+
+
+
+@keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Move the element 20px down initially */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Move the element back to its original position */
+    }
+}
+
