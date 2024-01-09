@@ -163,7 +163,7 @@ a {
     background-color: black;
     left: 1240px;
     top: 480px;
-    animation: fade-up 0.5s 0.4s backwards;
+    animation: fade-up 0.6s 0.5s backwards;
 
 }
 
@@ -175,6 +175,7 @@ a {
     left: 1270px;
     top: 430px;
     opacity: 80%;
+    animation: fade-up 0.6s 0.6s backwards;
 }
 
 .profile_border3 {
@@ -185,6 +186,7 @@ a {
     left: 1310px;
     top: 400px;
     opacity: 60%;
+    animation: fade-up 0.6s 0.7s backwards;
 }
 
 .profile_border4 {
@@ -195,6 +197,7 @@ a {
     left: 1325px;
     top: 360px;
     opacity: 40%;
+    animation: fade-up 0.6s 0.8s backwards;
 }
 
 hr {
@@ -220,7 +223,7 @@ hr {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     background-color: rgb(0, 0, 0);
-    margin: 50px auto;
+    margin: 40px auto;
 }
 
 .project_lists h3 {
@@ -644,3 +647,6 @@ input:nth-child(2) {
     }
 }
 
+@media screen and (max-width: 768px) {
+    
+}

@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Show or hide the button based on the scroll position
+    // Show or hide the button
     window.addEventListener('scroll', function () {
         toggleScrollTopButton();
     });
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Intersection Observer for elements with the 'jump' class
+// Intersection Observer
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry);
@@ -40,8 +40,6 @@ const hiddenElements = document.querySelectorAll('.jump');
 hiddenElements.forEach((element) => observer.observe(element));
 
 
-
-//
 document.querySelectorAll('.lists a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
