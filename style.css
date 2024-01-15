@@ -156,24 +156,24 @@ a {
 }
 
 
+
 .profile_border {
     width: 30px;
     height: 30px;
-    position: absolute;
+    position: relative;
     background-color: black;
-    left: 1240px;
-    top: 480px;
+    left: -10px;
+    top: 380px;
     animation: fade-up 0.6s 0.5s backwards;
-
 }
 
 .profile_border2 {
     width: 25px;
     height: 25px;
-    position: absolute;
+    position: relative;
     background-color: black;
-    left: 1270px;
-    top: 430px;
+    left: 20px;
+    top: 300px;
     opacity: 80%;
     animation: fade-up 0.6s 0.6s backwards;
 }
@@ -181,10 +181,10 @@ a {
 .profile_border3 {
     width: 20px;
     height: 20px;
-    position: absolute;
+    position: relative;
     background-color: black;
-    left: 1310px;
-    top: 400px;
+    left: 42px;
+    top: 230px;
     opacity: 60%;
     animation: fade-up 0.6s 0.7s backwards;
 }
@@ -192,10 +192,10 @@ a {
 .profile_border4 {
     width: 10px;
     height: 10px;
-    position: absolute;
+    position: relative;
     background-color: black;
-    left: 1325px;
-    top: 360px;
+    left: 65px;
+    top: 170px;
     opacity: 40%;
     animation: fade-up 0.6s 0.8s backwards;
 }
@@ -649,8 +649,4 @@ input:nth-child(2) {
       opacity: 1;
       transform: translateY(0); /* Move the element back to its original position */
     }
-}
-
-@media screen and (max-width: 768px) {
-    
 }
